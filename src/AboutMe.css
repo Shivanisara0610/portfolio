@@ -1,0 +1,217 @@
+/* outer doodle background shell */
+
+.about-shell {
+  max-width: 1500px;
+  width: 100%;
+  margin: 2rem auto;
+  padding: 1.8rem;
+  border-radius: 2.6rem;
+  background-size: 260px 260px;
+  background-repeat: repeat;
+  box-shadow: 0 22px 55px rgba(188, 158, 206, 0.45);
+}
+
+/* inner white card */
+
+.about-card {
+  display: grid;
+  grid-template-columns: minmax(0, 340px) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+  padding: 3rem 3.4rem;
+  border-radius: 2.2rem;
+  background: #ffffff;
+}
+
+/* polaroid photo */
+
+.about-photo-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.about-polaroid {
+  position: relative;
+  width: 310px; /* bigger polaroid */
+  background: #ffffff;
+  border-radius: 2rem;
+  padding: 1rem 1rem 1.8rem; /* extra bottom for polaroid look */
+  box-shadow: 0 24px 55px rgba(180, 150, 200, 0.55);
+  transform: rotate(-3deg);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* active hover effect */
+.about-polaroid:hover {
+  transform: rotate(-1deg) translateY(-4px);
+  box-shadow: 0 28px 65px rgba(180, 150, 200, 0.65);
+}
+
+.about-photo {
+  display: block;
+  width: 100%;
+  border-radius: 1.6rem;
+  object-fit: cover;
+}
+
+/* tiny heart in top-right corner of frame */
+
+.about-polaroid-heart {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.8rem;
+  font-size: 1.1rem;
+  color: #ff84a3;
+}
+
+.about-polaroid-caption {
+  margin-top: 0.6rem;
+  text-align: center;
+  font-size: 0.94rem;
+  color: #7a6584;
+}
+
+/* text side */
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.about-heading {
+  font-size: 2.4rem;
+  letter-spacing: 0.12em;
+  color: #7a6584;
+  text-transform: uppercase;
+}
+
+.about-intro {
+  font-size: 1.1rem;
+  color: #4b4758;
+  line-height: 1.5; /* tighter lines */
+}
+
+.about-body {
+  font-size: 0.98rem;
+  color: #5c5a6b;
+  line-height: 1.55; /* was 1.7 */
+}
+
+/* Toolkit (colourful chips) */
+
+.about-tech {
+  margin-top: 1.8rem;
+}
+
+.about-tech-title {
+  font-size: 1.2rem;
+  color: #7a6584;
+  margin-bottom: 0.9rem;
+}
+
+.about-tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* base chip style */
+
+.about-tech-chips span {
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: #3a3740;
+  border: 1px solid transparent;
+  box-shadow: 0 6px 16px rgba(180, 170, 210, 0.5);
+}
+
+/* colourful variants */
+
+.chip-react {
+  background: linear-gradient(135deg, #dff2ff, #c8e0ff);
+  border-color: #c3daff;
+}
+
+.chip-html {
+  background: linear-gradient(135deg, #ffe6d1, #ffd2b3);
+  border-color: #ffc7a3;
+}
+
+.chip-ts {
+  background: linear-gradient(135deg, #e1e8ff, #cfd8ff);
+  border-color: #c1ceff;
+}
+
+.chip-python {
+  background: linear-gradient(135deg, #fff7c8, #ffe9a1);
+  border-color: #ffe08c;
+}
+
+.chip-ml {
+  background: linear-gradient(135deg, #defbea, #c6f2d9);
+  border-color: #b7eccf;
+}
+
+.chip-node {
+  background: linear-gradient(135deg, #e5ffe0, #cdf7c7);
+  border-color: #c2f0bc;
+}
+
+.chip-git {
+  background: linear-gradient(135deg, #ffe2ea, #ffc9d7);
+  border-color: #ffb6cc;
+}
+
+/* responsive */
+
+@media (max-width: 900px) {
+  .about-shell {
+    padding: 1.2rem;
+    border-radius: 2rem;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+    padding: 2.2rem 1.8rem;
+    gap: 2rem;
+  }
+
+  .about-polaroid {
+    max-width: 270px;
+    transform: rotate(-2deg);
+  }
+
+  .about-heading {
+    font-size: 2rem;
+  }
+}
+
+.about-bubble-left {
+  width: 70px;
+  height: 70px;
+  top: 40px;
+  left: 24px;
+  background: rgba(255, 240, 222, 0.85);
+  border-color: rgba(255, 220, 195, 0.95);
+  animation-duration: 4.2s;
+}
+
+.about-bubble-right {
+  width: 50px;
+  height: 50px;
+  bottom: 36px;
+  right: 40px;
+  background: rgba(224, 241, 255, 0.9);
+  border-color: rgba(204, 229, 255, 0.95);
+  animation-duration: 5.4s;
+}
+
+.about-star-1 {
+  top: 16px;
+  right: 140px;
+  font-size: 1.2rem;
+  animation-duration: 3.8s;
+}

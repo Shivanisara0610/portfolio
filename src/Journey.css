@@ -1,0 +1,392 @@
+.journey-section {
+  min-height: calc(100vh - 80px);
+  padding: 4rem 1.5rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.journey-inner {
+  max-width: 1100px;
+  width: 100%;
+}
+
+/* Heading */
+
+.journey-heading-wrap {
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+
+.journey-heading-pill {
+  display: inline-block;
+  padding: 0.7rem 2.8rem;
+  border-radius: 2.4rem;
+  background: linear-gradient(90deg, #d2e2ff, #eacfff);
+  border: 1px solid rgba(186, 160, 211, 0.6);
+  box-shadow: 0 14px 35px rgba(150, 130, 190, 0.35);
+  font-size: 2.8rem;
+  color: #2f2840;
+}
+
+/* Timeline layout */
+
+.journey-timeline {
+  position: relative;
+  margin-top: 0.5rem;
+}
+
+/* center vertical line (black, visible) */
+
+.journey-line {
+  position: absolute;
+  inset: 0;
+  left: 35%;
+  width: 3px;
+  transform: translateX(-50%);
+  background: #222222;
+  border-radius: 999px;
+  opacity: 0.95;
+}
+
+.journey-steps {
+  position: relative;
+  width: 100%;
+}
+
+/* each step wrapper */
+
+.journey-step {
+  position: relative;
+  width: 100%;
+  margin: 2.5rem 0;
+}
+
+/* base card size & style */
+
+.journey-card {
+  width: 360px;
+  max-width: 42%;
+  border-radius: 1.8rem;
+  padding: 1.7rem 1.9rem 1.9rem;
+  box-shadow: 0 18px 40px rgba(160, 135, 160, 0.35);
+  background: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.journey-card:hover {
+  transform: translateY(-4px) rotate(0deg);
+}
+
+/* LEFT cards – placed to the left of the line with a small gap */
+
+.journey-step--left .journey-card {
+  position: relative;
+  left: calc(50% - 360px - 0.2rem);
+  transform-origin: right center;
+}
+
+/* RIGHT cards – placed to the right of the line */
+
+.journey-step--right .journey-card {
+  position: relative;
+  left: calc(50% + 0rem);
+  transform-origin: left center;
+}
+
+/* pastel gradient variants */
+
+.journey-card-yellow {
+  background: linear-gradient(135deg, #fff3c2, #ffe0af);
+  border: 1px solid #ffe0af;
+}
+
+.journey-card-blue {
+  background: linear-gradient(135deg, #dde9ff, #e0d7ff);
+  border: 1px solid #d7ccff;
+}
+
+.journey-card-green {
+  background: linear-gradient(135deg, #dcf9de, #c9f1d4);
+  border: 1px solid #c9f1d4;
+}
+
+.journey-card-pink {
+  background: linear-gradient(135deg, #ffe0f0, #ffd0dc);
+  border: 1px solid #ffd0dc;
+}
+
+/* slight rotations */
+
+.journey-tilt-left {
+  transform: rotate(-1.5deg);
+}
+
+.journey-tilt-right {
+  transform: rotate(1.5deg);
+}
+
+/* card header */
+
+.journey-card-top {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.journey-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(186, 160, 211, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 22px rgba(160, 120, 200, 0.25);
+  font-size: 1.2rem;
+}
+
+.journey-year-pill {
+  padding: 0.25rem 0.9rem;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid rgba(186, 160, 211, 0.5);
+  box-shadow: 0 6px 16px rgba(160, 120, 200, 0.2);
+  font-size: 0.9rem;
+  color: #64616e;
+}
+
+.journey-card-title {
+  font-size: 1.4rem;
+  margin-bottom: 0.4rem;
+  color: #40354d;
+}
+
+.journey-card-text {
+  font-size: 1rem;
+  color: #5e5a6a;
+  line-height: 1.6;
+}
+
+/* connector dots */
+
+.journey-connector {
+  position: absolute;
+  top: 50%;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #ffffff;
+  border: 2px solid #b9a0ff;
+  box-shadow: 0 0 0 4px rgba(185, 160, 255, 0.25);
+  transform: translateY(-50%);
+}
+
+.journey-connector--right {
+  right: 65%;
+  transform: translate(50%, -50%);
+}
+
+.journey-connector--left {
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+
+/* scroll fade-in */
+
+.journey-fade {
+  opacity: 0;
+  transform: translateY(30px) scale(0.98);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.journey-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* ---- floating doodles (bubbles + stars) ---- */
+
+.journey-bubble-top-lg {
+  width: 90px;
+  height: 90px;
+  top: -25px;
+  right: 40px;
+  background: rgba(234, 225, 255, 0.9);
+  border: 2px solid rgba(213, 197, 255, 0.95);
+  animation-duration: 5.2s;
+}
+
+.journey-bubble-top-sm {
+  width: 48px;
+  height: 48px;
+  top: 20px;
+  left: -150px;
+  background: rgba(255, 237, 247, 0.9);
+  border: 2px solid rgba(255, 214, 233, 0.95);
+  animation-duration: 4.1s;
+}
+
+.journey-bubble-mid {
+  width: 60px;
+  height: 60px;
+  top: 45%;
+  right: -10px;
+  background: rgba(218, 243, 233, 0.9);
+  border: 2px solid rgba(190, 232, 214, 0.95);
+  animation-duration: 5.8s;
+}
+
+.journey-bubble-bottom-lg {
+  width: 82px;
+  height: 82px;
+  bottom: -15px;
+  left: 30px;
+  background: rgba(224, 241, 255, 0.9);
+  border: 2px solid rgba(204, 229, 255, 0.95);
+  animation-duration: 6.2s;
+}
+
+.journey-bubble-bottom-sm {
+  width: 44px;
+  height: 44px;
+  bottom: 40px;
+  left: 70%;
+  background: rgba(255, 240, 222, 0.9);
+  border: 2px solid rgba(255, 220, 195, 0.95);
+  animation-duration: 4.7s;
+}
+
+/* extra bubbles spread around the page */
+
+.journey-bubble-left-mid {
+  width: 55px;
+  height: 55px;
+  top: 35%;
+  left: -50px;
+  background: rgba(255, 228, 247, 0.9);
+  border: 2px solid rgba(255, 201, 233, 0.95);
+  animation-duration: 5.3s;
+}
+
+.journey-bubble-right-mid {
+  width: 70px;
+  height: 70px;
+  top: 30%;
+  right: -200px;
+  background: rgba(225, 241, 255, 0.9);
+  border: 2px solid rgba(205, 226, 255, 0.95);
+  animation-duration: 6s;
+}
+
+.journey-bubble-center-small {
+  width: 40px;
+  height: 40px;
+  top: 55%;
+  left: 55%;
+  background: rgba(222, 249, 234, 0.9);
+  border: 2px solid rgba(193, 237, 213, 0.95);
+  animation-duration: 4.4s;
+}
+
+.journey-bubble-far-left {
+  width: 65px;
+  height: 65px;
+  top: 10%;
+  left: -170px;
+  background: rgba(255, 243, 223, 0.9);
+  border: 2px solid rgba(255, 220, 187, 0.95);
+  animation-duration: 7s;
+}
+
+.journey-bubble-far-right {
+  width: 52px;
+  height: 52px;
+  bottom: 15%;
+  right: -155px;
+  background: rgba(237, 228, 255, 0.9);
+  border: 2px solid rgba(214, 199, 255, 0.95);
+  animation-duration: 5.7s;
+}
+
+
+.journey-star-1 {
+  top: 18%;
+  left: 68%;
+  font-size: 1.2rem;
+  animation-duration: 3.6s;
+}
+
+.journey-star-2 {
+  top: 62%;
+  right: 22%;
+  font-size: 1.4rem;
+  animation-duration: 4.1s;
+}
+
+.journey-star-3 {
+  bottom: 8%;
+  right: 6%;
+  font-size: 1.1rem;
+  animation-duration: 3.3s;
+}
+
+/* ending note (if you keep it) */
+
+.journey-ending {
+  margin-top: 2.8rem;
+  text-align: center;
+}
+
+.journey-ending-card {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 1.8rem;
+  padding: 1.2rem 2.2rem;
+  border: 1px solid rgba(186, 160, 211, 0.6);
+  box-shadow: 0 14px 35px rgba(150, 130, 190, 0.25);
+  transform: rotate(-1deg);
+  font-size: 1.1rem;
+  color: #4a3d5e;
+}
+
+/* responsive: stack cards on right */
+
+@media (max-width: 900px) {
+  .journey-heading-pill {
+    font-size: 2.4rem;
+    padding: 0.6rem 2.2rem;
+  }
+
+  .journey-line {
+    left: 24px;
+  }
+
+  .journey-step {
+    margin: 2.1rem 0;
+  }
+
+  .journey-card {
+    max-width: calc(100% - 3.8rem);
+    left: 3.8rem !important;
+  }
+
+  .journey-connector {
+    left: 24px;
+    transform: translate(-50%, -50%);
+  }
+
+  .journey-bubble-top-lg {
+    right: 10px;
+  }
+
+  .journey-bubble-mid {
+    right: 0;
+  }
+
+  .journey-bubble-bottom-lg {
+    left: 10px;
+  }
+}
