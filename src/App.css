@@ -1,10 +1,7 @@
-/* -------- Global layout & background -------- */
-
 body {
   margin: 0;
   min-height: 100vh;
   font-family: "Poppins", sans-serif;
-  /* pastel ombré background for main site */
   background: linear-gradient(135deg, #f6dbdb 0%, #eed2e8 35%, #d3ece1 100%);
 }
 
@@ -12,7 +9,6 @@ body {
   min-height: 100vh;
 }
 
-/* main sections (except final white page) */
 .page-section {
   min-height: 100vh;
   display: flex;
@@ -21,23 +17,18 @@ body {
   padding: 3rem 1.5rem;
 }
 
-/* host for last page – no extra styles, WrapUp sets its own white bg */
 .wrapup-host-section {
   padding: 0;
 }
-
-/* -------- Shared card style (white box) -------- */
 
 .card {
   background: #ffffff;
   border-radius: 2.2rem;
   box-shadow: 0 18px 55px rgba(188, 158, 206, 0.35);
   border: 1px solid #f6dbdb;
-  max-width: 1500px; /* overall white box width */
+  max-width: 1500px;
   margin: 2rem auto;
 }
-
-/* -------- Avatar images in sections -------- */
 
 .profileart,
 .about-img {
@@ -47,8 +38,6 @@ body {
   display: block;
   box-shadow: 0 4px 18px rgba(245, 204, 214, 0.7);
 }
-
-/* -------- Hero / headings -------- */
 
 .title {
   font-size: 2.7rem;
@@ -74,8 +63,6 @@ h2 {
   font-family: "Poppins", sans-serif;
 }
 
-/* -------- Skills chips -------- */
-
 .skills {
   display: flex;
   flex-wrap: wrap;
@@ -91,8 +78,6 @@ h2 {
   font-weight: 600;
   box-shadow: 0 2px 10px rgba(195, 225, 210, 0.7);
 }
-
-/* -------- Timeline (Journey) -------- */
 
 .timeline {
   list-style: none;
@@ -122,8 +107,6 @@ h2 {
   font-size: 1.1rem;
 }
 
-/* -------- Responsive tweaks -------- */
-
 @media (max-width: 700px) {
   .page-section {
     padding: 2rem 1rem;
@@ -145,8 +128,6 @@ h2 {
   }
 }
 
-/* -------- Page enter animation -------- */
-
 .page-root-enter {
   animation: pageEnter 0.6s ease-out;
 }
@@ -161,50 +142,9 @@ h2 {
     transform: translateY(0) scale(1);
   }
 }
-
-/* -------- Navbar -------- */
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  padding: 0 2.5rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  backdrop-filter: blur(14px);
-  background: rgba(255, 244, 252, 0.7);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.6);
-  z-index: 100;
-}
-
-.nav-left {
-  font-weight: 600;
-  color: #7a6584;
-}
-
-.nav-links {
-  display: flex;
-  gap: 1.5rem;
-  font-size: 0.95rem;
-}
-
-.nav-links a {
-  color: #7a6584;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  text-decoration: underline;
-}
-
-/* main content not hidden behind navbar */
 main {
   padding-top: 80px;
 }
-/* shared floating doodles for all pages */
 
 .floating-bubble,
 .floating-star {
@@ -224,8 +164,6 @@ main {
 .floating-star {
   font-size: 1.3rem;
 }
-
-/* motion */
 
 @keyframes floatDrift {
   0%,

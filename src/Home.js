@@ -26,7 +26,12 @@ export default function Home() {
               Student • Frontend Intern • Doodle Fanatic
             </p>
             <p className="hero-body">
-              Right now, most of my time goes into learning, experimenting, and building small web experiences that feel calm, clear, and a bit whimsical. I enjoy taking rough ideas, sketching them in pastel, and slowly turning them into interactive pages that actually work. Scroll down to see the projects, experiments, and doodles that came out of that process.
+              Right now, most of my time goes into learning, experimenting, and
+              building small web experiences that feel calm, clear, and a bit
+              whimsical. I enjoy taking rough ideas, sketching them in pastel,
+              and slowly turning them into interactive pages that actually work.
+              Scroll down to see the projects, experiments, and doodles that
+              came out of that process.
             </p>
 
             <div className="hero-tags">
@@ -61,7 +66,7 @@ export default function Home() {
             </div>
           </div>
 
-          {/* floating bubbles + stars inside hero card */}
+          {/* floating doodles */}
           <div className="floating-bubble home-bubble-big" />
           <div className="floating-bubble home-bubble-small" />
           <div className="floating-star home-star-1">✨</div>

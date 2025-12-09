@@ -1,3 +1,5 @@
+/* sticky pastel navbar */
+
 .nav {
   position: sticky;
   top: 0;
@@ -15,6 +17,8 @@
   justify-content: space-between;
 }
 
+/* logo */
+
 .nav-logo {
   font-weight: 700;
   font-size: 1.3rem;
@@ -27,6 +31,8 @@
   font-size: 1.1rem;
   margin-left: 0.15rem;
 }
+
+/* desktop links */
 
 .nav-links {
   display: flex;
@@ -56,8 +62,10 @@
   width: 100%;
 }
 
+/* hamburger button (hidden on desktop) */
+
 .nav-toggle {
-  display: none;
+  display: none;           /* desktop: hidden */
   background: none;
   border: none;
   padding: 0.2rem;
@@ -89,6 +97,8 @@
   transform: translateY(-7px) rotate(-45deg);
 }
 
+/* mobile dropdown menu (hidden by default) */
+
 .nav-mobile {
   display: none;
 }
@@ -108,16 +118,18 @@
   color: #5a4c6a;
 }
 
+/* ---------- mobile breakpoint ---------- */
+
 @media (max-width: 768px) {
   .nav-inner {
     padding-inline: 1rem;
   }
 
   .nav-links {
-    display: none; 
+    display: none;        /* mobile: hide desktop links */
   }
 
   .nav-toggle {
-    display: block;
+    display: block;       /* mobile: show hamburger */
   }
 }

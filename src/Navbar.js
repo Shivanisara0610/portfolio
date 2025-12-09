@@ -12,16 +12,16 @@ function Navbar() {
     <header className="nav">
       <div className="nav-inner">
         <a href="#home" className="nav-logo">
-          Shivi<span>✨</span>
+          Shivani's Portfolio<span>✨</span>
         </a>
 
         {/* desktop links */}
         <nav className="nav-links">
           <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#journey">Journey</a>
+          <a href="#about">About Me</a>
+          <a href="#journey">My Journey</a>
           <a href="#life">Life Beyond Code</a>
-          <a href="#wrap">Contact</a>
+          <a href="#wrap">Wrap</a>
         </nav>
 
         {/* mobile hamburger */}
@@ -44,16 +44,16 @@ function Navbar() {
           Home
         </a>
         <a href="#about" onClick={handleLinkClick}>
-          About
+          About Me
         </a>
         <a href="#journey" onClick={handleLinkClick}>
-          Journey
+          My Journey
         </a>
         <a href="#life" onClick={handleLinkClick}>
           Life Beyond Code
         </a>
         <a href="#wrap" onClick={handleLinkClick}>
-          Contact
+          Wrap
         </a>
       </nav>
     </header>
