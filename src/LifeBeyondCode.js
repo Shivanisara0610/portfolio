@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import "./LifeBeyondCode.css";
 
@@ -10,7 +9,7 @@ import Photo5 from "./assets/life5.jpeg";
 import Photo6 from "./assets/life6.jpeg";
 
 function LifeBeyondCode() {
-  const [frame, setFrame] = useState(0); 
+  const [frame, setFrame] = useState(0);
 
   const photos = [
     {
@@ -26,12 +25,14 @@ function LifeBeyondCode() {
     {
       src: Photo3,
       alt: "Pottery in progress",
-      caption: "Messy hands, spinning clay, and slowly learning the rhythm of the wheel.",
+      caption:
+        "Messy hands, spinning clay, and slowly learning the rhythm of the wheel.",
     },
     {
       src: Photo4,
-      alt: "Trying Embroidery",
-      caption: "SQuiet embroidery sessions turning tiny stitches into colourful patterns.",
+      alt: "Trying embroidery",
+      caption:
+        "Quiet embroidery sessions turning tiny stitches into colourful patterns.",
     },
     {
       src: Photo5,
@@ -40,12 +41,13 @@ function LifeBeyondCode() {
     },
     {
       src: Photo6,
-      alt: "......",
+      alt: "Everyday moment",
       caption: "Collecting everyday moments for my gallery.",
     },
   ];
 
-  const totalFrames = Math.ceil(photos.length / 2); 
+  // each frame holds up to 2 photos
+  const totalFrames = Math.ceil(photos.length / 2);
 
   const goNext = () => {
     setFrame((prev) => (prev + 1) % totalFrames);
@@ -61,10 +63,12 @@ function LifeBeyondCode() {
     <section className="life-section" id="life">
       <div className="life-card">
         <h2 className="life-title">Life Beyond Code</h2>
-         <p className="life-intro">
-    When I&apos;m not studying or coding, you&apos;ll probably find me crocheting,
-    trying new dessert recipes, or wandering around to try new things.
-  </p>
+        <p className="life-intro">
+          When I&apos;m not studying or coding, you&apos;ll probably find me
+          crocheting, trying new dessert recipes, or wandering around to try
+          new things.
+        </p>
+
         <div className="life-carousel">
           <button
             className="life-arrow life-arrow-left"
@@ -79,12 +83,31 @@ function LifeBeyondCode() {
               className="life-track"
               style={{ transform: `translateX(-${frame * 100}%)` }}
             >
-              {photos.map((p, idx) => (
-                <div className="life-photo" key={idx}>
-                  <img src={p.src} alt={p.alt} />
-                  <span className="life-polaroid-label">{p.alt}</span>
-                </div>
-              ))}
+              {Array.from({ length: totalFrames }).map((_, idx) => {
+                const first = photos[idx * 2];
+                const second = photos[idx * 2 + 1];
+
+                return (
+                  <div className="life-frame-inner" key={idx}>
+                    {first && (
+                      <div className="life-photo">
+                        <img src={first.src} alt={first.alt} />
+                        <span className="life-polaroid-label">
+                          {first.alt}
+                        </span>
+                      </div>
+                    )}
+                    {second && (
+                      <div className="life-photo">
+                        <img src={second.src} alt={second.alt} />
+                        <span className="life-polaroid-label">
+                          {second.alt}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                );
+              })}
             </div>
           </div>
 
@@ -96,6 +119,7 @@ function LifeBeyondCode() {
             ›
           </button>
         </div>
+
         <div className="life-mood-block">
           <div className="life-mood-top">
             <span className="life-mood-label">Snapshot:</span>

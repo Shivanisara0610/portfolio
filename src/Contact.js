@@ -6,10 +6,9 @@ export default function Contact() {
       <p>
         Got a fun tech idea? Need frontend help or just want to share memes? 
         <br />
-        Email me at <a href="mailto:youremail@gmail.com">youremail@gmail.com</a>
+        Email me at <a href="mailto:shivanisara6@gmail.com">shivanisara6@gmail.com</a>
       </p>
       <div className="social-icons">
-        {/* Add icons or images for LinkedIn, Instagram, WhatsApp, etc. */}
         <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a>
         <a href="https://wa.me/xxxxxxxxxx" target="_blank" rel="noopener noreferrer">WhatsApp</a>

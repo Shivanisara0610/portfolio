@@ -1,4 +1,3 @@
-// src/WrapUp.js
 import React, { useState } from "react";
 import "./WrapUp.css";
 
@@ -6,26 +5,38 @@ function WrapUp() {
   const [isEnvelopeOpen, setIsEnvelopeOpen] = useState(false);
 
   const socialLinks = [
-    { label: "GitHub", emoji: "🐙" },
-    { label: "LinkedIn", emoji: "💼" },
-    { label: "Twitter", emoji: "🐦" },
-    { label: "Email", emoji: "📧" },
+    {
+      label: "GitHub",
+      emoji: "🐙",
+      href: "https://github.com/Shivanisara0610",
+    },
+    {
+      label: "LinkedIn",
+      emoji: "💼",
+      href: "https://www.linkedin.com/in/your-linkedin-id",
+    },
+    {
+      label: "Twitter",
+      emoji: "🐦",
+      href: "https://twitter.com/your-handle",
+    },
+    {
+      label: "Email",
+      emoji: "📧",
+      href: "mailto:shivanisara6@email.com",
+    },
   ];
 
   return (
     <section className="wrapup-section" id="wrap">
       <div className="wrapup-inner">
-        {/* top text (smaller) */}
         <h2 className="wrapup-title-small">Let&apos;s Create Something Amazing!</h2>
         <p className="wrapup-subtitle-small">
           Thanks for scrolling through my pastel doodle portfolio. Whether you
           want to collaborate, chat about tech, or just say hi, it would be
           great to connect. 🎨
         </p>
-
-        {/* two-column content */}
         <div className="wrapup-main">
-          {/* LEFT: envelope + letter */}
           <div
             className="wrapup-left"
             onClick={() => setIsEnvelopeOpen((prev) => !prev)}
@@ -34,7 +45,6 @@ function WrapUp() {
             <div className="wrapup-sparkle wrapup-sparkle--bottom">✨</div>
 
             <div className="wrapup-envelope-wrapper">
-              {/* letter */}
               <div
                 className={
                   "wrapup-letter " +
@@ -56,11 +66,9 @@ function WrapUp() {
   sounds like your kind of chaos, we should definitely chat.
 </p>
                 <div className="wrapup-letter-signoff">
-                  <span>- your friendly developer</span>
+                  <span>- Shivani</span>
                 </div>
               </div>
-
-              {/* envelope body */}
               <div className="wrapup-envelope">
                 <div className="wrapup-envelope-back" />
                 <div
@@ -84,27 +92,31 @@ function WrapUp() {
               </div>
             </div>
           </div>
-
-          {/* RIGHT: contact panel */}
           <div className="wrapup-right">
             <div className="wrapup-panel">
               <h3 className="wrapup-panel-title">Get In Touch 📬</h3>
 
               <div className="wrapup-social-row">
-                {socialLinks.map((link) => (
-                  <button key={link.label} className="wrapup-social-btn">
-                    <span className="wrapup-social-emoji">{link.emoji}</span>
-                    {link.label}
-                  </button>
-                ))}
-              </div>
+  {socialLinks.map((link) => (
+    <a
+      key={link.label}
+      href={link.href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="wrapup-social-btn"
+    >
+      <span className="wrapup-social-emoji">{link.emoji}</span>
+      {link.label}
+    </a>
+  ))}
+</div>
 
               <div className="wrapup-email-box">
                 <p>Or drop a quick message:</p>
                 <div className="wrapup-email-row">
                   <input
                     type="email"
-                    placeholder="your@email.com"
+                    placeholder="shivanisara6@email.com"
                     className="wrapup-input"
                   />
                   <button className="wrapup-send-btn">➤</button>
@@ -113,8 +125,6 @@ function WrapUp() {
             </div>
           </div>
         </div>
-
-        {/* bottom badge */}
         <div className="wrapup-footer">
           <div className="wrapup-badge">
             Made with ❤️ and lots of ☕
@@ -123,8 +133,6 @@ function WrapUp() {
             © 2025 Portfolio. Keep creating, keep doodling! ✨
           </p>
         </div>
-
-        {/* floating shapes */}
         <div className="wrapup-float wrapup-float--left" />
         <div className="wrapup-float wrapup-float--right" />
       </div>
